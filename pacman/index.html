@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PacMan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/maze.css">
+
+</head>
+
+<body>
+    <main class="container">
+        <div class="container" id="scoreContent">
+            <p>HIGH SCORE</p>
+            <span id="heightScore"></span>
+            <span id="currentScore"></span>
+
+        </div>
+
+        <div class="container" id="boardContent">
+
+        </div>
+        <div class="container" id="statusContent">
+            <div id="nbLives"></div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/data/maze.js"></script>
+    <script src="js/data/const.js"></script>
+    <script src="js/view/board.js"></script>
+    <script src="js/model/component.js"></script>
+    <script src="js/model/tile.js"></script>
+    <script src="js/model/dot.js"></script>
+    <script src="js/model/wall.js"></script>
+    <script src="js/model/position.js"></script>
+    <script src="js/model/direction.js"></script>
+    <script src="js/model/sprite.js"></script>
+    <script src="js/model/layer.js"></script>
+    <script src="js/model/maze.js"></script>
+    <script src="js/model/game.js"></script>
+    <script src="js/model/pacman.js"></script>
+    <script src="js/model/ghost.js"></script>
+    <script src="js/view/GameView.js"></script>
+    <script src="js/Controller/GameCtrl.js"></script>
+    <script src="js/Controller/PacmanCtrl.js"></script>
+    <script src="js/view/PacmanView.js"></script>
+    <script>
+        $(document).ready(function () {
+            gameCtrl = new GameCtrl(RAW_MAZE);
+            gameCtrl.run();
+        });
+
+    </script>
+</body>
+
+</html>
